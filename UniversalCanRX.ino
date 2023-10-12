@@ -41,7 +41,7 @@ void loop() {
     
     // Affichage des informations du message CAN sur la console série
     String message = "ID: 0x" + String(rxId, HEX) + " Data:";
-    for(byte i = 0; i < 8; i++) {  // Affichage des 8 octets d'une trame CAN
+    for(byte i = 0; i < len; i++) {  // Affichage de la trame complète (non nettoyée)
       message += " 0x" + String(rxBuf[i], HEX);
     }
     Serial.println(message);
