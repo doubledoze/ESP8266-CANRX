@@ -53,6 +53,6 @@ void startCan() {
     Serial.println("MCP2515 Initialized Successfully!");
   else
     Serial.println("Error Initializing MCP2515...");
-  
+  CAN0.setMode(MCP_LISTENONLY);
   pinMode(CAN0_INT, INPUT);  // Configuration du pin INT
 }
